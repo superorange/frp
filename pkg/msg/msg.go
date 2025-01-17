@@ -74,15 +74,15 @@ type ClientSpec struct {
 
 // When frpc start, client send this message to login to server.
 type Login struct {
-	Version      string            `json:"version,omitempty"`
-	Hostname     string            `json:"hostname,omitempty"`
-	Os           string            `json:"os,omitempty"`
-	Arch         string            `json:"arch,omitempty"`
-	User         string            `json:"user,omitempty"`
-	PrivilegeKey string            `json:"privilege_key,omitempty"`
-	Timestamp    int64             `json:"timestamp,omitempty"`
-	RunID        string            `json:"run_id,omitempty"`
-	Metas        map[string]string `json:"metas,omitempty"`
+	Version      string            `json:"vs,omitempty"`
+	Hostname     string            `json:"ht,omitempty"`
+	Os           string            `json:"s,omitempty"`
+	Arch         string            `json:"a,omitempty"`
+	User         string            `json:"u,omitempty"`
+	PrivilegeKey string            `json:"pv,omitempty"`
+	Timestamp    int64             `json:"t,omitempty"`
+	RunID        string            `json:"r,omitempty"`
+	Metas        map[string]string `json:"m,omitempty"`
 
 	// Currently only effective for VirtualClient.
 	ClientSpec ClientSpec `json:"client_spec,omitempty"`
@@ -151,12 +151,12 @@ type NewWorkConn struct {
 type ReqWorkConn struct{}
 
 type StartWorkConn struct {
-	ProxyName string `json:"proxy_name,omitempty"`
-	SrcAddr   string `json:"src_addr,omitempty"`
-	DstAddr   string `json:"dst_addr,omitempty"`
-	SrcPort   uint16 `json:"src_port,omitempty"`
-	DstPort   uint16 `json:"dst_port,omitempty"`
-	Error     string `json:"error,omitempty"`
+	ProxyName string `json:"pty,omitempty"`
+	SrcAddr   string `json:"sty,omitempty"`
+	DstAddr   string `json:"dty,omitempty"`
+	SrcPort   uint16 `json:"spt,omitempty"`
+	DstPort   uint16 `json:"dpt,omitempty"`
+	Error     string `json:"e,omitempty"`
 }
 
 type NewVisitorConn struct {
